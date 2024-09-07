@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Despesas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Despesas</h1>
+        
+        <!-- Salário -->
+        <div class="input-group">
+            <label for="salario">Salário:</label>
+            <input type="number" id="salario" placeholder="Digite o salário" />
+        </div>
+        
+        <!-- Tabela de despesas e dívidas -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Dívida</th>
+                </tr>
+            </thead>
+            <tbody id="despesas-tbody">
+                <!-- Linhas geradas dinamicamente -->
+            </tbody>
+        </table>
+        
+        <!-- Botão para adicionar novas linhas -->
+        <button onclick="adicionarLinha()">Adicionar Linha</button>
+        
+        <!-- Botão para calcular o total -->
+        <button onclick="calcularTotal()">Calcular Total</button>
+        
+        <!-- Resultados -->
+        <div id="resultado">
+            <h2>Total Disponível: <span id="total">0</span></h2>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
